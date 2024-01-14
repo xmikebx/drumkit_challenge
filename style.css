@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.ubuntu-light {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .ubuntu-light-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .ubuntu-medium {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .ubuntu-medium-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .ubuntu-bold-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #4a5759;
+    align-items: center;
+}
+
+header {
+margin: 0px;
+padding: 0px;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.dPad {
+/* background-color: darkblue; */
+display: flex;
+justify-content: center;
+/* margin: 0px 70px; */
+}
+
+
+
+.dPadBtns {
+    /* background-color: coral; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dPadBtns ul {
+    display: block;
+    background-color: black;
+    margin: 5px;
+    padding: 5px;
+    border: 2px transparent;
+    border-radius: 10px;
+    width: 80px;
+}
+
+.dPadBtns li {
+    /* background-color: darkcyan; */
+    color: #ffffff;
+    list-style: none;
+    text-align: center;
+    padding: 5px;
+
+}
+
+.filter {
+filter: invert(100%) sepia(5%) saturate(7413%) hue-rotate(186deg) brightness(119%) contrast(109%);
+}
+
+
+.indicator {
+    background-color: #33444d69;
+    border: 2px solid rgba(0, 0, 0, 0.218);
+    border-radius: 5px;
+}
+
+.dKit {
+/* background-color: cornflowerblue; */
+margin: 0px;
+padding: 0px;
+height: 400px;
+width: 400px;
+/* scale: 50%; */
+font-size: 0px;
+}
+
+#img1{ 
+    position: absolute;
+    height: 400px;
+    width: auto;
+
+}
+
+#img2 {
+    position: relative;
+    left: 20px;
+    top: 135px;
+    width: 86px;
+}
+
+#boomKickOn {
+    background-color: black;
+    position: relative;
+    left: 130px;
+    top: 178px;
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+}
+
+#tomOnL {
+    background-color: black;
+    position: relative;
+    left: 80px;
+    top: 22px;
+    width: 55px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+#tomOnR {
+    background-color: black;
+    position: relative;
+    left: 235px;
+    top: 16px;
+    width: 55px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+#snareOn {
+    background-color: black;
+    position: relative;
+    left: 156px;
+    top: -20px;
+    width: 55px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+    #hihatImg {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column-reverse;
+    width: 86px;
+    position: relative;
+    z-index: 1;
+    left: 300px;
+    top: 165px;
+}
+
+    #img3 {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 86px;
+        }
+
+    #img4 {
+    position: relative;
+    left: 0px;
+    top: 2px;
+    width: 86px;
+    }    
+
+
+
+@keyframes img2 {
+    50%{
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes hihatRot {
+    0%, 100%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+} 
+
+@keyframes hihatOpen {
+    0%, 100%{
+        top: 2px;
+    }
+    50%{
+        top: -8px;
+    }
+}
+
+@keyframes drumCol {
+    0% {
+        background-color: #4a5759;
+
+    }
+      100% {
+        background-color: black;
+      }
+}
+
+
+@keyframes pulseIndicator {
+    0% {
+      background-color: #fe0404;
+    }
+    100% {
+        background-color: #33444d69;
+    }
+  }
+
+
+
+
+@media (max-width: 640px) {
+
+.dPad {
+    margin: 100px;
+}
+
+.dKit {
+    display: none;
+    /* scale: 60%; */
+
+}
+}

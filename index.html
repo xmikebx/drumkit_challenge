@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drumkit Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="ubuntu-bold">Drumkit Challenge</h1>
+    </header>
+
+
+    <div class="dPad">
+        <div class="dPadBtns ubuntu-regular">
+                <ul id="a" class="dPadKey">
+                    <li class="indicator"><audio id="boom" src="./sounds/boom.wav"></audio></li>
+                    <li>A</li>
+                    <li>BOOM</li>
+                </ul>  
+                <ul id="s" class="dPadKey">
+                    <li class="indicator"><audio id="clap" src="./sounds/clap.wav"></audio></li>
+                    <li>S</li>
+                    <li>CLAP</li>
+                </ul>              
+                <ul id="d" class="dPadKey">
+                    <li class="indicator"><audio id="hihat" src="./sounds/hihat.wav"></audio></li>
+                    <li>D</li>
+                    <li>HIHAT</li>
+                </ul>               
+                <ul id="f" class="dPadKey">
+                    <li class="indicator"><audio id="kick" src="./sounds/kick.wav"></audio></li>
+                    <li>F</li>
+                    <li>KICK</li>
+                </ul>              
+                <ul id="g" class="dPadKey">
+                    <li class="indicator"><audio id="openhat" src="./sounds/openhat.wav"></audio></li>
+                    <li>G</li>
+                    <li>OPENHAT</li>
+                </ul>  
+                <ul id="h" class="dPadKey">
+                    <li class="indicator"><audio id="ride" src="./sounds/ride.wav"></audio></li>
+                    <li>H</li>
+                    <li>RIDE</li>
+                </ul>
+                <ul id="j" class="dPadKey">
+                    <li class="indicator"><audio id="snare" src="./sounds/snare.wav"></audio></li>
+                    <li>J</li>
+                    <li>SNARE</li>
+                </ul>      
+                <ul id="k" class="dPadKey">
+                    <li class="indicator"><audio id="tink" src="./sounds/tink.wav"></audio></li>
+                    <li>K</li>
+                    <li>TINK</li>
+                </ul>
+                <ul id="l"class="dPadKey">
+                    <li class="indicator"><audio id="tom" src="./sounds/tom.wav"></audio></li>
+                    <li>L</li>
+                    <li>TOM</li>
+                </ul>
+        </div>
+    </div>
+        <div class="dKit">
+            <img id="img1" src="./images/kit_full.svg" alt="kit_full">
+            <img id="img2" src="./images/ride.svg" alt="ride">
+                <div id="hihatImg">
+                    <img id="img3" src="./images/openhat_bottom.svg" alt="openhat_bottom">
+                    <img id="img4" src="./images/openhat_top.svg" alt="openhat_top">
+                </div>
+                <div id="boomKickOn"></div>
+                <div id="tomOn">
+                    <div id="tomOnL"></div>
+                    <div id="tomOnR"></div>
+                </div>
+                <div id="snareOn"></div>
+                
+        </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
