@@ -252,14 +252,8 @@ font-size: 0px;
     }
   }
 
-
-
-
+  
 @media (max-width: 640px) {
-
-.dPad {
-    margin: 100px;
-}
 
 .dKit {
     display: none;

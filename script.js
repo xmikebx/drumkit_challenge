@@ -8,7 +8,7 @@ let snare = document.getElementById(`snare`);
 let tink = document.getElementById(`tink`);
 let tom = document.getElementById(`tom`);
 
-const dPadKeyList = document.getElementsByClassName(`dPadKey`);
+// const dPadKeyList = document.getElementsByClassName(`dPadKey`);
 const currentIndicator = document.getElementsByClassName(`indicator`);
 const rideAnim = document.getElementById(`img2`);
 const hihatRot = document.getElementById(`hihatImg`);
@@ -18,28 +18,28 @@ const snareOn = document.getElementById(`snareOn`);
 const tomOnL = document.getElementById(`tomOnL`);
 const tomOnR = document.getElementById(`tomOnR`);
 
+// Event Listener for click event, because the container chosen for click event has multiple items we need to traverse to parent element to set id.
 
-document.querySelectorAll('.dPadKey').forEach(item => {
-    item.addEventListener('click', (e) => {
-
-
-        const x = e.target;
-        const y = x.parentElement;
-        const z= y.id;
-            console.log(x, y, z);
-
-
-      }
-    );
-    
-
+document.addEventListener("click", (e) => {
+    const a = e.target;
+    const b = a.parentElement;
+    const c= b.id;
+    doThing(c)
 })
 
+// Event Listener for keypress event
 
-  window.addEventListener('keydown', (e) => {
-    console.log(`${e.key}`);
- 
-    if (e.key  === "a")  {
+document.addEventListener("keypress", (e) => {
+    const d = e.key;
+        doThing(d)
+})
+
+// Function to run based on the results from doThing (c) or (d)
+
+const doThing = (id) => {
+    const selectedItem = document.getElementById(id)
+
+     if (selectedItem.id  === "a")  {
         currentIndicator[0].style.animation = "pulseIndicator 1.5s linear";
         boomKickOn.style.animation = "drumCol 1.5s linear";
         setTimeout(() => {
@@ -49,7 +49,7 @@ document.querySelectorAll('.dPadKey').forEach(item => {
         boom.pause()
         boom.currentTime = 0
         boom.play();
-    } else if (e.key === "s") {
+    } else if (selectedItem.id === "s") {
         currentIndicator[1].style.animation = "pulseIndicator 1.5s linear";
         setTimeout(() => {
             currentIndicator[1].style.removeProperty('animation')
@@ -57,7 +57,7 @@ document.querySelectorAll('.dPadKey').forEach(item => {
         clap.pause()
         clap.currentTime = 0 
         clap.play();
-    } else if (e.key === "d") {
+    } else if (selectedItem.id === "d") {
         currentIndicator[2].style.animation = "pulseIndicator 1.5s linear";
         hihatRot.style.animation = "hihatRot 0.1s linear";
         setTimeout(() => {
@@ -67,7 +67,7 @@ document.querySelectorAll('.dPadKey').forEach(item => {
         hihat.pause()
         hihat.currentTime = 0
         hihat.play();
-    } else if (e.key === "f") {
+    } else if (selectedItem.id === "f") {
         currentIndicator[3].style.animation = "pulseIndicator 1.5s linear";
         boomKickOn.style.animation = "drumCol 0.1s linear";
         setTimeout(() => {
@@ -77,7 +77,7 @@ document.querySelectorAll('.dPadKey').forEach(item => {
         kick.pause()
         kick.currentTime = 0
         kick.play();
-    } else if (e.key === "g") {
+    } else if (selectedItem.id === "g") {
         currentIndicator[4].style.animation = "pulseIndicator 1.5s linear";
         hihatOpen.style.animation = "hihatOpen 0.1s linear";
         setTimeout(() => {
@@ -87,7 +87,7 @@ document.querySelectorAll('.dPadKey').forEach(item => {
         openhat.pause()
         openhat.currentTime = 0
         openhat.play();
-    } else if (e.key === "h") {
+    } else if (selectedItem.id === "h") {
         currentIndicator[5].style.animation = "pulseIndicator 1.5s linear";
         rideAnim.style.animation = "img2 0.1s linear";
         setTimeout(() => {
@@ -97,7 +97,7 @@ document.querySelectorAll('.dPadKey').forEach(item => {
         ride.pause()
         ride.currentTime = 0
         ride.play();
-    } else if (e.key === "j") {
+    } else if (selectedItem.id === "j") {
         currentIndicator[6].style.animation = "pulseIndicator 1.5s linear";
         snareOn.style.animation = "drumCol 0.1s linear";
 
@@ -108,7 +108,7 @@ document.querySelectorAll('.dPadKey').forEach(item => {
         snare.pause()
         snare.currentTime = 0
         snare.play();
-    } else if (e.key === "k") {
+    } else if (selectedItem.id === "k") {
         currentIndicator[7].style.animation = "pulseIndicator 1.5s linear";
         setTimeout(() => {
             currentIndicator[7].style.removeProperty('animation')
@@ -116,7 +116,7 @@ document.querySelectorAll('.dPadKey').forEach(item => {
         tink.pause()
         tink.currentTime = 0
         tink.play();
-    } else if (e.key === "l") {
+    } else if (selectedItem.id === "l") {
         currentIndicator[8].style.animation = "pulseIndicator 1.5s linear";
         tomOnL.style.animation = "drumCol 0.1s linear";
         tomOnR.style.animation = "drumCol 0.1s linear";
@@ -124,10 +124,11 @@ document.querySelectorAll('.dPadKey').forEach(item => {
             currentIndicator[8].style.removeProperty('animation')
             tomOnL.style.removeProperty('animation')
             tomOnR.style.removeProperty('animation')
-
         }, 100)  
         tom.pause()
         tom.currentTime = 0
         tom.play();
     }
-  });
+};   
+
+
